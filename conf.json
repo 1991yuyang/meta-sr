@@ -1,0 +1,36 @@
+{
+  "train": {
+    "LR_size": [25, 25],
+    "init_lr": 0.001,
+    "final_lr": 0.00001,
+    "batch_size": 16,
+    "epoch": 1000,
+    "CUDA_VISIBLE_DEVICES": "0",
+    "train_hr_img_dir": "/home/yuyang/data/sr_data/train_img",
+    "valid_hr_img_dir": "/home/yuyang/data/sr_data/valid_img",
+    "k": 3,
+    "inC": 4,
+    "outC": 4,
+    "print_step": 2,
+    "r_range": [1, 6],
+    "r_step": 0.1,
+    "FLM_use_unet": false,
+    "num_workers": 4,
+    "weight_decay": 0.0001,
+    "use_costum_loss": true,
+    "use_interpolate_branch": true
+  },
+  "predict": {
+    "use_best_model": true,
+    "LR_size": [25, 25],
+    "k": 3,
+    "inC": 4,
+    "outC": 4,
+    "r_range": [1, 6],
+    "r_step": 0.1,
+    "FLM_use_unet": false,
+    "input_img_with_original_size": false,
+    "img_dir": "/home/yuyang/python_projects/meta_sr/one_test_img",
+    "use_interpolate_branch": true
+  }
+}
